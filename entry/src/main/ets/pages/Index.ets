@@ -1,4 +1,3 @@
-
 //                            _ooOoo_
 //                           o8888888o
 //                           88" . "88
@@ -23,7 +22,7 @@
 
 import { EnablementView } from '../view/EnablementView';
 import { Banner } from '../view/Banner';
-import { TutoraiView } from '../view/TutorialView';
+import { TutorailView } from '../view/TutorialView';
 
 @Entry
 @Component
@@ -47,7 +46,7 @@ struct Index {
         Column(){
           Banner()
           EnablementView()
-          TutoraiView()
+          TutorailView()
         }
       }.layoutWeight(1)
       .scrollBar(BarState.Off)

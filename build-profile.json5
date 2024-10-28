@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\GAOMUgenius\\.ohos\\config\\default_QuickStart_WYit8Q1MMOBhh46so2pexLzTRnYEkvXlD2apbMnS9sQ=.cer",
+          "storePassword": "0000001BB7194949F73EF96468EFE69563E8704C0ADAB2EBD5B5080C78EF77222AD102B17A6127852E2D7C",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BE5B0E0AD508A7C781FB470D7FEF35C73B4A5217BAAC3BAC6CB5FA39E4566FEE0EA4A8C868FBBE0",
+          "profile": "C:\\Users\\GAOMUgenius\\.ohos\\config\\default_QuickStart_WYit8Q1MMOBhh46so2pexLzTRnYEkvXlD2apbMnS9sQ=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\GAOMUgenius\\.ohos\\config\\default_QuickStart_WYit8Q1MMOBhh46so2pexLzTRnYEkvXlD2apbMnS9sQ=.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
