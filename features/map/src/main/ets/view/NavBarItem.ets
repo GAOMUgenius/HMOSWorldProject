@@ -3,13 +3,10 @@ export interface NavBarItemType {
   title: string
 }
 
-@Preview
+
 @Component
 export struct NavBarItem {
-  @State navBarItem: NavBarItemType = {
-    order: '01',
-    title: '准备学习'
-  }
+  @Prop navBarItem: NavBarItemType;
   build() {
     Row() {
       Text(this.navBarItem.order)
