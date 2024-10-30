@@ -4,6 +4,12 @@
     "type": "entry",
     "description": "$string:module_desc",
     "mainElement": "EntryAbility",
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "$string:apply_for_network"
+      }
+    ],
     "deviceTypes": [
       "phone",
       "tablet",
