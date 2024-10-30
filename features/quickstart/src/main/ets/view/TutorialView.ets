@@ -5,6 +5,7 @@ import { bufferToString } from '../util/BufferUtil';
 @Component
 export struct TutorailView {
   @State tutorialList: Array<ArticleClass> = [];
+  @Consume('articlePathStack') articlePathStack: NavPathStack;
 
   aboutToAppear(): void {
     this.getTutorailDataFromJSON()
@@ -30,6 +31,9 @@ export struct TutorailView {
         ForEach(this.tutorialList, (item: ArticleClass) => {
           ListItem() {
             Tutorialitem({ tutorialitem: item })
+              .onClick(() => {
+                this.articlePathStack.pushPathByName('articleDetail', item)
+              })
           }
         }, (item: ArticleClass) => item.id)
 
