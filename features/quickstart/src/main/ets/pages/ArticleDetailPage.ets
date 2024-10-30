@@ -1,7 +1,7 @@
 import { ArticleClass } from "../model/ArticleClass"
 import { webview } from "@kit.ArkWeb"
 
-@Preview
+
 @Component
 export struct ArticleDetailPage {
   @State articleDetail: ArticleClass | null = null

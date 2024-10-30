@@ -4,6 +4,7 @@ import { bufferToString } from '../util/BufferUtil'
 
 @Component
 export struct Banner {
+  @Consume('articlePathStack') articlePathStack: NavPathStack
   //定义需要渲染的Banner图片数据
   @State bannerList: Array<BannerClass> = []
 
@@ -39,6 +40,9 @@ export struct Banner {
             bottom: 11
           })
           .borderRadius(16)
+          .onClick(() => {
+            this.articlePathStack.pushPathByName('bannerDetailPage', item);
+          })
       }, (item: BannerClass, index: number) => item.id)
     }.autoPlay(true)
     .loop(true)
