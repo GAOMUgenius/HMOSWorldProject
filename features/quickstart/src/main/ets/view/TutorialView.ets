@@ -1,7 +1,7 @@
 import { ArticleClass } from '../model/ArticleClass';
 import { bufferToString } from '../util/BufferUtil';
 
-@Preview
+
 @Component
 export struct TutorailView {
   @State tutorialList: Array<ArticleClass> = [];
@@ -48,7 +48,7 @@ export struct TutorailView {
 }
 
 //入门教程列表视图
-@Preview
+
 @Component
 struct Tutorialitem {
   @Prop tutorialitem: ArticleClass

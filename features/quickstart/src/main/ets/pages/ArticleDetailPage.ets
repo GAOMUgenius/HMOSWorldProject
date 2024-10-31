@@ -10,7 +10,6 @@ export struct ArticleDetailPage {
   aboutToAppear(): void {
     this.articleDetail = this.articlePathStack.getParamByName('articleDetail')[0] as ArticleClass;
   }
-
   build() {
     NavDestination() {
       Column() {

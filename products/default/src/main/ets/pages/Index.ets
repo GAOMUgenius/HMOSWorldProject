@@ -1,13 +1,15 @@
 import { CourseLearning } from '@ohos/learning'
 import { KnowledgeMap, KnowledgeMapContent } from '@ohos/map'
 import { QuickStartPage } from '@ohos/quickstart'
-
+import { BreakpointSystem, BreakpointTypeEnum } from '@ohos/utils';
 @Entry
 @Component
 struct Index {
 
   @State currentIndex: number = 0;
   private tabsController : TabsController = new TabsController();
+  private breakpointSystem: BreakpointSystem = new BreakpointSystem();
+  @StorageProp('currentBreakpoint') currentBreakpoint: string = BreakpointTypeEnum.MD;
 
   @Builder
   tabBarBuilder(title: string, targetIndex: number, selectedIcon: Resource, unselectIcon: Resource) {
@@ -33,8 +35,21 @@ struct Index {
     })
   }
 
+  aboutToAppear() {
+    this.breakpointSystem.register();
+  }
+
+  aboutToDisappear() {
+    this.breakpointSystem.unregister();
+  }
+
   build() {
-    Tabs({ barPosition: BarPosition.End, controller: this.tabsController }) {
+    Tabs({
+      barPosition: this.currentBreakpoint === BreakpointTypeEnum.LG ?
+      BarPosition.Start :
+      BarPosition.End,
+      controller: this.tabsController
+      }) {
       TabContent() {
         QuickStartPage()
       }
@@ -51,15 +66,17 @@ struct Index {
       .tabBar(this.tabBarBuilder('知识地图', 2, $r('app.media.ic_01_on'), $r('app.media.ic_01_off')))
 
     }
+    .vertical(this.currentBreakpoint === BreakpointTypeEnum.LG ? true : false)
     //无法横向滑动切换页签
     .scrollable(false)
     //限制Tabs为非纵向导航条
-    .vertical(false)
+    // .vertical(false)
     .divider({
       strokeWidth: 0.5,
       color: '#0D182431'
     })
     .backgroundColor('#F1F3F5')
     .padding({ top: 36, bottom: 28 })
+
   }
 }

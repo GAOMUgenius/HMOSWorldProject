@@ -49,7 +49,7 @@ export struct EnablementView {
   }
 }
 
-@Preview
+
 @Component
 struct Enablementitem {
   @Prop enablementitem: ArticleClass

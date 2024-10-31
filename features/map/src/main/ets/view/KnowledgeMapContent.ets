@@ -20,7 +20,7 @@ const TypeMapIcon: Record<string, string> = {
   '视频教程': 'app.media.ic_video',
 }
 
-@Preview
+
 @Component
 export struct KnowledgeMapContent {
   scroller: Scroller = new Scroller();
