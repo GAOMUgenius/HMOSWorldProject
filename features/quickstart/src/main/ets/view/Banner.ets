@@ -1,12 +1,14 @@
 import { BannerClass } from '../model/BannerClass'
 import { buffer } from '@kit.ArkTS'
 import { bufferToString } from '../util/BufferUtil'
+import { BreakpointType, BreakpointTypeEnum } from '@ohos/utils'
 
 @Component
 export struct Banner {
   @Consume('articlePathStack') articlePathStack: NavPathStack
   //定义需要渲染的Banner图片数据
   @State bannerList: Array<BannerClass> = []
+  @StorageProp('currentBreakpoint') currentBreakpoint: string = BreakpointTypeEnum.MD;
 
   aboutToAppear(): void {
     this.getBannerDataFromJSON()
@@ -46,10 +48,13 @@ export struct Banner {
       }, (item: BannerClass, index: number) => item.id)
     }.autoPlay(true)
     .loop(true)
-    .indicator(
-      new DotIndicator()
-        .color('#1a000000')
-        .selectedColor('#0A59F7')
-    )
+    .displayCount(new BreakpointType({ sm: 1, md: 2, lg: 2 }).getValue(this.currentBreakpoint))
+    .displayMode(SwiperDisplayMode.STRETCH)
+    .indicator(this.currentBreakpoint === BreakpointTypeEnum.SM ?
+    Indicator.dot().
+    color('#1a000000').
+    selectedColor('#0A59F7') :
+      false)
+    .nextMargin(new BreakpointType<Length>({ sm: 0, md: 12, lg: 266 }).getValue(this.currentBreakpoint))
   }
 }
