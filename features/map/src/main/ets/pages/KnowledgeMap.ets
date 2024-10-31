@@ -94,7 +94,7 @@ export struct KnowledgeMap {
      *将mode属性设置为NavigationMode.Stack，Navigation组件即可设置为单页面显示模式。
      *将mode属性设置为NavigationMode.Split，Navigation组件即可设置为分栏显示模式。
      */
-    .mode(NavigationMode.Stack)
+    .mode(NavigationMode.Auto)
     //隐藏Navigation自带的标题
     .hideTitleBar(true)
     .navDestination(this.PageMap)
