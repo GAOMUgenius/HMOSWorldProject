@@ -63,7 +63,7 @@ struct Index {
       TabContent() {
         KnowledgeMap()
       }
-      .tabBar(this.tabBarBuilder('知识地图', 2, $r('app.media.ic_01_on'), $r('app.media.ic_01_off')))
+      .tabBar(this.tabBarBuilder('', 2, $r('app.media.ic_01_on'), $r('app.media.ic_01_off')))
 
     }
     .vertical(this.currentBreakpoint === BreakpointTypeEnum.LG ? true : false)
