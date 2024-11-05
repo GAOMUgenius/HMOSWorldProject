@@ -8,6 +8,23 @@
       {
         "name": "ohos.permission.INTERNET",
         "reason": "$string:apply_for_network"
+      },
+      {
+        "name": 'ohos.permission.DISTRIBUTED_DATASYNC',//申请的权限名称，必填，此处由于需要申请分布式数据同步的权限，所以填入“ohos.permission.DISTRIBUTED_DATASYNC”。
+        "reason": "$string:distributed_data_sync",//申请的权限名称，必填，此处由于需要申请分布式数据同步的权限，所以填入“ohos.permission.DISTRIBUTED_DATASYNC”。
+        /**
+        *描述权限使用的场景和时机。场景类型如下两种：
+        *
+        *ability：ability的名称，可配置多个。此处我们配置为快速入门案例的ability名称，即EntryAbility。
+        *
+        *when：调用时机，可填的值有inuse（使用时需要此权限）、always（ 所有时间都需要此权限），默认值为inuse。
+        **/
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
       }
     ],
     "deviceTypes": [
@@ -28,6 +45,7 @@
         "startWindowIcon": "$media:startIcon",
         "startWindowBackground": "$color:start_window_background",
         "exported": true,
+        "continuable": true,
         "skills": [
           {
             "entities": [

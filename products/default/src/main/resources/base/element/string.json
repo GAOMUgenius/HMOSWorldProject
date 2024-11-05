@@ -15,6 +15,10 @@
     {
       "name": "apply_for_network",
       "value": "Allow the app to access the network"
+    },
+    {
+      "name": "distributed_data_sync",
+      "value": "允许不同设备间的数据互换"
     }
   ]
 }
