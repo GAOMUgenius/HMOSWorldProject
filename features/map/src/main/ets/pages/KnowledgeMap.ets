@@ -34,7 +34,7 @@ export struct KnowledgeMap {
         this.sections = JSON.parse(res);
       });
     } catch (error) {
-      console.error(`callback getRawFileContent failed, error is ${JSON.stringify(error)}`)
+      console.error(`callback getRawFileContent  error is ${JSON.stringify(error)}`)
     }
   }
 
