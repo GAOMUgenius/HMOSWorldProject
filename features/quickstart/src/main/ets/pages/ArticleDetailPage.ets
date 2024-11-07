@@ -59,7 +59,7 @@ struct WebComponent {
         .darkMode(WebDarkMode.Auto)
         .domStorageAccess(true)
         .zoomAccess(true)
-        .fileAccess(false)
+        .fileAccess(true)
         .mixedMode(MixedMode.All)
         .cacheMode(CacheMode.None)
         .javaScriptAccess(true)
