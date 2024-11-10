@@ -62,7 +62,7 @@ struct WebComponent {
         .fileAccess(true)
         .mixedMode(MixedMode.All)
         .cacheMode(CacheMode.None)
-        .javaScriptAccess(true)
+        .javaScriptAccess(false)
         .width('100%')
         .layoutWeight(1)
     }
