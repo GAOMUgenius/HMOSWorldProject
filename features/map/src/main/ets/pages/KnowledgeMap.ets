@@ -81,7 +81,7 @@ export struct KnowledgeMap {
       /**
        * 添加constraintSize并设置minHeight为100%，
        * 可以解决当内容条数不足时，
-       * Scroll组件滚动时会出现空白
+       * Scroll组件滚动时会出现空白区域的错误效果
        */
       .constraintSize({ minHeight: '100%' })
       /**
