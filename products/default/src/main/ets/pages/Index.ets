@@ -70,7 +70,7 @@ struct Index {
     //无法横向滑动切换页签
     .scrollable(false)
     //限制Tabs为非纵向导航条
-    // .vertical(false)
+    .vertical(false)
     .divider({
       strokeWidth: 0.5,
       color: '#0D182431'
