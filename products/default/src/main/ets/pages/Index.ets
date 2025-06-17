@@ -1,5 +1,6 @@
 import { CourseLearning } from '@ohos/learning'
 import { KnowledgeMap, KnowledgeMapContent } from '@ohos/map'
+import { MinePage } from '@ohos/mine';
 import { QuickStartPage } from '@ohos/quickstart'
 import { BreakpointSystem, BreakpointTypeEnum } from '@ohos/utils';
 @Entry
@@ -58,12 +59,17 @@ struct Index {
       TabContent() {
         CourseLearning()
       }
-      .tabBar(this.tabBarBuilder('课程学习', 1, $r('app.media.ic_01_on'), $r('app.media.ic_01_off')))
+      .tabBar(this.tabBarBuilder('课程学习', 1, $r('app.media.ic_02_on'), $r('app.media.ic_02_off')))
 
       TabContent() {
         KnowledgeMap()
       }
-      .tabBar(this.tabBarBuilder('知识地图', 2, $r('app.media.ic_01_on'), $r('app.media.ic_01_off')))
+      .tabBar(this.tabBarBuilder('知识地图', 2, $r('app.media.ic_03_on'), $r('app.media.ic_03_off')))
+
+      TabContent() {
+        MinePage()
+      }
+      .tabBar(this.tabBarBuilder('我的', 3, $r('app.media.ic_04_on'), $r('app.media.ic_04_off')))
 
     }
     .vertical(this.currentBreakpoint === BreakpointTypeEnum.LG ? true : false)

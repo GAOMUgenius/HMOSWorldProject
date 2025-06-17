@@ -9,6 +9,7 @@
     "@ohos/learning": "file:../../features/learning",
     "@ohos/map": "file:../../features/map",
     "@ohos/quickstart": "file:../../features/quickstart",
-    '@ohos/utils': 'file:../../commons/utils'
+    '@ohos/utils': 'file:../../commons/utils',
+    "@ohos/mine": "file:../../features/mine"
   }
 }

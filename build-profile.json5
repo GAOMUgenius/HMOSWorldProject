@@ -50,6 +50,10 @@
     {
       "name": "quickstart",
       "srcPath": "./features/quickstart",
+    },
+    {
+      "name": "mine",
+      "srcPath": "./features/mine",
     }
   ]
 }
