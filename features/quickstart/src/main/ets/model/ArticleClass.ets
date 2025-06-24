@@ -14,3 +14,7 @@ export class ArticleClass {
     this.webUrl = webUrl;
   }
 }
+
+export interface ArticleIsFavorite {
+  onStarChange(articleId: string): void
+}
